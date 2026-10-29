@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بنکداری پخشان</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F7F2;--sf:#fff;--ink:#16221B;--mu:#5E6E64;--ln:#DCE5DD;--br:#14532D;--bi:#fff;--gd:#C8962B;--rd:#B3261E;--so:#E8F1E9;box-sizing:border-box}
+body{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1612;--sf:#15221B;--ink:#E8F0EA;--mu:#9DB2A5;--ln:#263A2E;--br:#3DAA73;--bi:#06140C;--rd:#FF8A80;--so:#1B2D23;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0D1612;--sf:#15221B;--ink:#E8F0EA;--mu:#9DB2A5;--ln:#263A2E;--br:#3DAA73;--bi:#06140C;--rd:#FF8A80;--so:#1B2D23;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;line-height:1.7}
+.w{max-width:1000px;margin:0 auto;padding:0 14px}
+.top{background:var(--br);color:var(--bi);font-size:13px;padding:5px 0}.top .w{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.hd{background:var(--sf);border-bottom:1px solid var(--ln)}.hd .w{display:flex;align-items:center;gap:12px;padding:10px 14px}
+.lg{width:54px;height:54px;border-radius:50%;flex:none}.hd b{font-size:20px;font-weight:800;white-space:nowrap}
+input,textarea,select{font-family:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--ln);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+#q{flex:1;min-width:0}
+.hero{margin-top:14px;border-radius:18px;padding:24px 18px;background:linear-gradient(135deg,#14532D,#22884E);color:#fff}
+.hero h1{margin:0 0 6px;font-size:24px;font-weight:800}.hero p{margin:0 0 14px;opacity:.95}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+button,.bt{font-family:inherit;font-size:14px;font-weight:600;border:0;border-radius:10px;padding:9px 14px;background:var(--br);color:var(--bi);cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.hero .bt{background:#fff;color:#14532D}.gl{background:var(--gd)!important;color:#2a1d00!important}
+button.gh,.bt.gh{background:transparent;color:var(--ink);border:1px solid var(--ln)}button.dl{background:transparent;color:var(--rd);border:1px solid var(--ln)}
+button:disabled,.bt.off{opacity:.45;cursor:not-allowed;pointer-events:none}
+:focus-visible{outline:3px solid var(--gd);outline-offset:2px}
+.sh{margin:26px 0 10px}.sh h2{margin:0;font-size:19px}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cd{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:3px}
+.em{font-size:42px;line-height:1.1}.cd h3{margin:0;font-size:15px}.ct{font-size:12px;color:var(--mu)}.pr{font-weight:800}
+.st{font-size:12px;font-weight:600}.st.yes{color:#1C7A55}.st.no{color:var(--rd)}.cd button{margin-top:6px}
+.deal{background:linear-gradient(135deg,#fff3d6,#ffdf94);color:#3a2a00;border-radius:18px;padding:16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.bd{background:#B3261E;color:#fff;border-radius:8px;padding:1px 8px;font-size:13px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:6px}.chip{white-space:nowrap;background:var(--sf);color:var(--ink);border:1px solid var(--ln);border-radius:99px}.chip.on{background:var(--br);color:var(--bi)}
+.pn{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:16px;margin-top:12px}.pn h2{margin:0 0 10px;font-size:18px}
+.cm{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:10px 14px;margin-bottom:8px}.cm p{margin:2px 0 0}
+.nt{color:var(--mu);font-size:14px;padding:14px 0;text-align:center}
+footer{background:var(--sf);border-top:1px solid var(--ln);margin-top:40px;padding:24px 0}footer p{margin:2px 0;color:var(--mu);font-size:14px}
+footer a.m{font-size:12px;opacity:.55;color:var(--mu);text-decoration:none}
+.ov{position:fixed;inset:0;background:#0008;display:flex;align-items:flex-end;justify-content:center;z-index:50}
+.sheet{background:var(--sf);width:100%;max-width:480px;border-radius:18px 18px 0 0;padding:18px 18px calc(18px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:10px}
+.f3{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}label{display:block;font-size:12px;color:var(--mu)}
+.pr2{display:grid;grid-template-columns:50px 1.6fr 1fr 70px 1fr auto auto;gap:6px;align-items:end;padding:8px 0;border-bottom:1px solid var(--ln)}
+@media(max-width:700px){.pr2{grid-template-columns:1fr 1fr}.pr2 .wd{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="top"><div class="w"><span id="hoursTop">🕗 ۸ تا ۱۵ — جمعه و تعطیلات رسمی تعطیل</span><span id="phoneTop">📞 ۷۷۳۲۳۱۳۱</span></div></div>
+<div class="hd"><div class="w"><img class="lg" alt="لوگو"><b id="nm">بنکداری پخشان</b><input type="text" id="q" placeholder="جستجوی محصول…" aria-label="جستجو"></div></div>
+<div class="w"><main id="app"><div class="nt">در حال بارگذاری…</div></main></div>
+<footer><div class="w">
+<div class="row" style="align-items:center;margin-bottom:10px"><img class="lg" alt=""><b id="footerName">بنکداری پخشان</b></div>
+<p id="footerAddress">📍 حکیمیه، سازمان آب، خیابان پنجم شیدایی، خیابان ششم جنوبی، پلاک ۶</p>
+<p id="footerContact">📞 ۷۷۳۲۳۱۳۱ — 🕗 ۸ تا ۱۵، جمعه و تعطیلات رسمی تعطیل</p>
+<div class="row" style="margin:12px 0"><a class="bt" id="mapFooter" href="https://nshn.ir/sbv_oxGx9APB" target="_blank" rel="noopener">مسیریابی</a><a class="bt" id="rubikaFooter" href="https://rubika.ir/BonakdariPakhshan" target="_blank" rel="noopener">روبیکا</a><span class="bt gh off">تلگرام (بزودی)</span><span class="bt gh off">وبسایت (بزودی)</span></div>
+<a class="m" id="fl" href="#admin">ورود مدیر</a></div></footer>
+<div id="sheet"></div>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script>
+const firebaseConfig={
+  apiKey:"AIzaSyBBQCKV3d-qezikxi8YrZNSRLzSmX273IA",
+  authDomain:"pakhshan-store.firebaseapp.com",
+  projectId:"pakhshan-store",
+  storageBucket:"pakhshan-store.firebasestorage.app",
+  messagingSenderId:"1018318790182",
+  appId:"1:1018318790182:web:c2ed06d5ec3a11d443d0e7",
+  measurementId:"G-5G9RZZN7RW"
+};
+firebase.initializeApp(firebaseConfig);
+const cloudDB=firebase.firestore();
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fa=n=>Number(n||0).toLocaleString('fa-IR');
+const ADMIN_PIN='13631363';
+const C={r1:'https://rubika.ir/Ebrahimi63114',r2:'https://rubika.ir/@Najafi291',tel:'tel:02177323131',map:'https://nshn.ir/sbv_oxGx9APB'};
+const S={prods:[],cats:[],coms:[],set:{name:'بنکداری پخشان',banner:'به بنکداری پخشان خوش آمدید',about:'بنکداری پخشان، عرضه‌کننده حضوری مواد غذایی و کالاهای مصرفی.',address:'حکیمیه، سازمان آب، خیابان پنجم شیدایی، خیابان ششم جنوبی، پلاک ۶',phone:'02177323131',phoneDisplay:'۷۷۳۲۳۱۳۱',hours:'۸ تا ۱۵ — جمعه و تعطیلات رسمی تعطیل',map:'https://nshn.ir/sbv_oxGx9APB',rubika:'https://rubika.ir/BonakdariPakhshan',commentsOn:true},q:'',cat:'',admin:false,loginError:'',sheet:null,ready:false,cloudError:''};
+let firstProductSnapshot=false, firstCategorySnapshot=false, firstSettingsSnapshot=false;
+function cleanDoc(obj){const out={...obj};delete out.id;return out}
+async function syncCollection(name,items){
+  const col=cloudDB.collection(name), snap=await col.get(), wanted=new Set(items.map(x=>String(x.id)));
+  let batch=cloudDB.batch(), count=0;
+  for(const d of snap.docs){if(!wanted.has(d.id)){batch.delete(d.ref);count++;if(count>=450){await batch.commit();batch=cloudDB.batch();count=0}}}
+  for(const item of items){if(!item.id)continue;batch.set(col.doc(String(item.id)),cleanDoc(item));count++;if(count>=450){await batch.commit();batch=cloudDB.batch();count=0}}
+  if(count)await batch.commit();
+}
+async function save(){
+  try{
+    await Promise.all([syncCollection('products',S.prods),syncCollection('cats',S.cats)]);
+    await cloudDB.doc('settings/main').set(S.set,{merge:true});
+    S.cloudError='';
+  }catch(e){S.cloudError='ذخیره آنلاین انجام نشد: '+(e.code||e.message||'خطای اتصال');alert(S.cloudError)}
+}
+function readyRender(){S.ready=firstProductSnapshot&&firstCategorySnapshot&&firstSettingsSnapshot;render()}
+function today(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}
+const active=()=>S.prods.filter(p=>p.active!==false),category=id=>(S.cats.find(c=>c.id===id)||{}).name||'بدون دسته';
+function price(p){return +p.price>0?fa(p.price)+' تومان':'تماس بگیرید'}
+function card(p){const out=(+p.stock||0)<=0;return `<div class="cd"><div class="em">${esc(p.emoji||'🛒')}</div><h3>${esc(p.name)}</h3><div class="ct">${esc(category(p.cat))}</div><div class="pr">${price(p)}</div><div class="st ${out?'no':'yes'}">${out?'ناموجود':'موجود'}</div><button data-act="order" data-id="${esc(p.id)}" ${out?'disabled':''}>ثبت سفارش</button></div>`}
+function grid(list){return list.length?`<div class="g">${list.map(card).join('')}</div>`:'<div class="nt">محصولی وجود ندارد.</div>'}
+function L(label,html){return `<div><label>${label}</label>${html}</div>`}
+function storeHTML(){const all=active(),q=S.q.trim().toLocaleLowerCase('fa');if(q)return `<div class="sh"><h2>نتیجه جستجو برای «${esc(q)}»</h2></div>${grid(all.filter(p=>(p.name+' '+category(p.cat)).toLocaleLowerCase('fa').includes(q)))}`;const newest=[...all].sort((a,b)=>(b.created||0)-(a.created||0)).slice(0,6);const list=S.cat?all.filter(p=>p.cat===S.cat):all;const chips=`<div class="chips"><button class="chip ${S.cat?'':'on'}" data-act="cat" data-id="">همه</button>${S.cats.map(c=>`<button class="chip ${S.cat===c.id?'on':''}" data-act="cat" data-id="${esc(c.id)}">${esc(c.name)}</button>`).join('')}</div>`;return `<div class="hero"><h1>${esc(S.set.banner||'به بنکداری پخشان خوش آمدید')}</h1><p>فروش حضوری مواد غذایی و کالاهای مصرفی</p><div class="row"><a class="bt" href="${esc(S.set.map||C.map)}" target="_blank" rel="noopener">📍 مسیریابی</a><a class="bt" href="tel:${esc(S.set.phone||'02177323131')}">📞 تماس</a></div></div><div class="sh"><h2>دسته‌بندی محصولات</h2></div>${chips}${grid(list)}<div class="sh"><h2>🆕 جدیدترین محصولات</h2></div>${grid(newest)}<div class="pn"><h2>درباره ما</h2><p>${esc(S.set.about||'')}</p><p>📍 ${esc(S.set.address||'')}<br>🕗 ساعت کاری: ${esc(S.set.hours||'')}</p></div>`}
+function adminHTML(){if(!S.admin)return `<div class="pn" style="max-width:400px;margin:28px auto"><h2>ورود مدیر</h2><label for="pin">رمز پنل مدیریت</label><input id="pin" type="password" inputmode="numeric" autocomplete="current-password" placeholder="رمز عبور" style="margin:6px 0 10px">${S.loginError?`<div style="color:var(--rd);margin-bottom:8px">${esc(S.loginError)}</div>`:''}<button data-act="login" style="width:100%">ورود</button><p class="ct">برای بازگشت به فروشگاه، از لینک پایین صفحه استفاده کنید.</p></div>`;const catOptions=S.cats.map(c=>`<option value="${esc(c.id)}">${esc(c.name)}</option>`).join('');return `<div class="pn"><h2>پنل مدیریت — تنظیمات کامل صفحه</h2><div class="f3">
+${L('نام فروشگاه',`<input id="shopname" value="${esc(S.set.name)}">`)}
+${L('متن بنر صفحه اصلی',`<input id="banner" value="${esc(S.set.banner||'')}">`)}
+${L('متن درباره ما',`<textarea id="about" rows="3">${esc(S.set.about||'')}</textarea>`)}
+${L('آدرس فروشگاه',`<textarea id="address" rows="2">${esc(S.set.address||'')}</textarea>`)}
+${L('شماره تماس برای نمایش',`<input id="phoneDisplay" value="${esc(S.set.phoneDisplay||'')}">`)}
+${L('شماره تماس برای تماس مستقیم',`<input id="phone" value="${esc(S.set.phone||'')}">`)}
+${L('ساعت کاری',`<input id="hours" value="${esc(S.set.hours||'')}">`)}
+${L('لینک مسیریابی',`<input id="map" value="${esc(S.set.map||C.map)}">`)}
+${L('لینک روبیکا',`<input id="rubika" value="${esc(S.set.rubika||'https://rubika.ir/BonakdariPakhshan')}">`)}
+${L('آدرس تصویر لوگو',`<input id="logo" value="${esc(S.set.logo||'')}" placeholder="https://...">`)}
+</div><button data-act="savesettings" style="margin-top:10px">ذخیره همه تنظیمات</button> <button class="gh" data-act="logout">خروج از مدیریت</button></div><div class="pn"><h2>افزودن محصول</h2><div class="f3">${L('نام محصول','<input id="newname" placeholder="مثلاً حبوبات">')}${L('قیمت به تومان','<input id="newprice" type="number" min="0" placeholder="0">')}${L('موجودی','<input id="newstock" type="number" min="0" value="1">')}${L('آیکون ایموجی','<input id="newemoji" value="🛒" maxlength="8">')}${L('دسته‌بندی',`<select id="newcat">${catOptions}</select>`)}</div><button data-act="addproduct" style="margin-top:10px">افزودن محصول</button></div><div class="pn"><h2>محصولات (${S.prods.length})</h2>${S.prods.map(p=>`<div class="pr2" data-pid="${esc(p.id)}"><div>${L('آیکون',`<input data-f="emoji" value="${esc(p.emoji||'🛒')}">`)}</div><div class="wd">${L('نام',`<input data-f="name" value="${esc(p.name)}">`)}</div><div>${L('قیمت',`<input data-f="price" type="number" min="0" value="${+p.price||0}">`)}</div><div>${L('موجودی',`<input data-f="stock" type="number" min="0" value="${+p.stock||0}">`)}</div><div>${L('دسته',`<select data-f="cat">${catOptions.replace(`value="${esc(p.cat)}"`,`value="${esc(p.cat)}" selected`)}</select>`)}</div><button class="gh" data-act="toggle" data-id="${esc(p.id)}">${p.active===false?'نمایش':'مخفی'}</button><button class="dl" data-act="delete" data-id="${esc(p.id)}">حذف</button></div>`).join('')||'<p>محصولی ثبت نشده است.</p>'}</div><div class="pn"><h2>دسته‌بندی‌ها</h2>${S.cats.map(c=>`<div class="row" style="margin-bottom:8px"><input data-catname="${esc(c.id)}" value="${esc(c.name)}" style="flex:1;width:auto"><button class="dl" data-act="delcat" data-id="${esc(c.id)}">حذف</button></div>`).join('')}<div class="row"><input id="newcatname" placeholder="نام دسته جدید" style="flex:1;width:auto"><button data-act="addcat">افزودن دسته</button></div></div>`}
+function render(){document.title=S.set.name||'بنکداری پخشان';$('#nm').textContent=S.set.name||'بنکداری پخشان';const fn=$('#footerName');if(fn)fn.textContent=S.set.name||'بنکداری پخشان';const ad=$('#footerAddress');if(ad)ad.textContent='📍 '+(S.set.address||'');const fc=$('#footerContact');if(fc)fc.textContent='📞 '+(S.set.phoneDisplay||'')+' — 🕗 '+(S.set.hours||'');const mapf=$('#mapFooter');if(mapf)mapf.href=S.set.map||C.map;const rubf=$('#rubikaFooter');if(rubf)rubf.href=S.set.rubika||'https://rubika.ir/BonakdariPakhshan';const ht=$('#hoursTop');if(ht)ht.textContent='🕗 '+(S.set.hours||'');const pt=$('#phoneTop');if(pt)pt.textContent='📞 '+(S.set.phoneDisplay||'');document.querySelectorAll('.lg').forEach(img=>{if(S.set.logo)img.src=S.set.logo;else img.removeAttribute('src')});const admin=location.hash==='#admin';$('#fl').textContent=admin?'بازگشت به فروشگاه':'ورود مدیر';$('#fl').href=admin?'#store':'#admin';$('#app').innerHTML=!S.ready?'<div class="nt">در حال اتصال به فروشگاه آنلاین…</div>':(S.cloudError?'<div class="nt">'+esc(S.cloudError)+'</div>':'')+(admin?adminHTML():storeHTML());$('#sheet').innerHTML=S.sheet?`<div class="ov" data-act="close"><div class="sheet" onclick="event.stopPropagation()"><b>ثبت سفارش: ${esc(S.sheet.name)}</b><a class="bt" href="${esc(S.set.r1||C.r1)}" target="_blank" rel="noopener">پیام در روبیکا — ابراهیمی</a><a class="bt" href="${esc(S.set.r2||C.r2)}" target="_blank" rel="noopener">پیام در روبیکا — نجفی</a><a class="bt gl" href="tel:${esc(S.set.phone||'02177323131')}">تماس بگیرید</a><button class="gh" data-act="close">بستن</button></div></div>`:'';
+$('#app').querySelectorAll('[data-f="cat"]').forEach(sel=>{const pid=sel.closest('[data-pid]').dataset.pid;sel.value=(S.prods.find(p=>p.id===pid)||{}).cat||''})}
+$('#q').addEventListener('input',e=>{S.q=e.target.value;if(location.hash!=='#admin')render()});window.addEventListener('hashchange',render);document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='pin')login()});
+function login(){const pin=$('#pin');if(pin&&pin.value===ADMIN_PIN){S.admin=true;S.loginError='';render()}else{S.loginError='رمز واردشده اشتباه است.';render()}}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act,id=b.dataset.id;if(a==='order'){S.sheet=S.prods.find(p=>p.id===id);render();return}if(a==='close'){S.sheet=null;render();return}if(a==='cat'){S.cat=id;render();return}if(a==='login'){login();return}if(a==='logout'){S.admin=false;render();return}if(a==='savesettings'){S.set.name=$('#shopname').value.trim()||'بنکداری پخشان';for(const k of ['banner','about','address','phoneDisplay','phone','hours','map','rubika','logo']){const el=$('#'+k);if(el)S.set[k]=el.value.trim()}save();render();return}if(a==='addproduct'){const name=$('#newname').value.trim();if(!name)return alert('نام محصول را وارد کنید.');S.prods.push({id:'p'+Date.now(),name,price:Math.max(0,+$('#newprice').value||0),stock:Math.max(0,+$('#newstock').value||0),emoji:$('#newemoji').value||'🛒',cat:$('#newcat').value||'',active:true,created:Date.now()});save();render();return}if(a==='toggle'){const p=S.prods.find(p=>p.id===id);if(p)p.active=p.active===false;save();render();return}if(a==='delete'&&confirm('این محصول حذف شود؟')){S.prods=S.prods.filter(p=>p.id!==id);save();render();return}if(a==='addcat'){const name=$('#newcatname').value.trim();if(!name)return alert('نام دسته را وارد کنید.');S.cats.push({id:'c'+Date.now(),name,order:Date.now()});save();render();return}if(a==='delcat'&&confirm('دسته حذف شود؟')){S.cats=S.cats.filter(c=>c.id!==id);S.prods.forEach(p=>{if(p.cat===id)p.cat=''});save();render();return}});
+document.addEventListener('change',e=>{const i=e.target;if(i.dataset.f){const row=i.closest('[data-pid]'),p=S.prods.find(x=>x.id===row.dataset.pid);if(!p)return;const k=i.dataset.f;p[k]=k==='price'||k==='stock'?Math.max(0,+i.value||0):i.value;save();if(k==='name'||k==='cat'||k==='price'||k==='stock'||k==='emoji')render()}if(i.dataset.catname){const c=S.cats.find(x=>x.id===i.dataset.catname);if(c){c.name=i.value.trim()||c.name;save();render()}}});
+if(!location.hash)location.hash='#store';render();
+cloudDB.collection('products').onSnapshot(snap=>{S.prods=snap.docs.map(d=>({id:d.id,...d.data()}));firstProductSnapshot=true;S.cloudError='';readyRender()},err=>{S.cloudError='خطای خواندن محصولات از دیتابیس: '+(err.code||err.message);firstProductSnapshot=true;readyRender()});
+cloudDB.collection('cats').onSnapshot(snap=>{S.cats=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.order||0)-(b.order||0));firstCategorySnapshot=true;readyRender()},err=>{S.cloudError='خطای خواندن دسته‌بندی‌ها: '+(err.code||err.message);firstCategorySnapshot=true;readyRender()});
+cloudDB.doc('settings/main').onSnapshot(doc=>{if(doc.exists)S.set={...S.set,...doc.data()};firstSettingsSnapshot=true;readyRender()},err=>{S.cloudError='خطای خواندن تنظیمات: '+(err.code||err.message);firstSettingsSnapshot=true;readyRender()});
+</script>
+</body>
+</html>
